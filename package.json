@@ -1,0 +1,39 @@
+{
+  "name": "vidualize",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.14.5",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "feather-icons": "^4.29.1",
+    "framer-motion": "^10.16.2",
+    "next": "13.4.12",
+    "next-sanity": "^5.1.7",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-player": "^2.13.0",
+    "react-responsive-carousel": "^3.2.23",
+    "sanity": "^3.14.5",
+    "styled-components": "5.2",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10",
+    "sass": "^1.66.1"
+  }
+}

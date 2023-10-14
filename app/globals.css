@@ -1,0 +1,296 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'Big Shoulders Display';
+  src: url('/fonts/BigShouldersDisplay-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  
+}
+
+div.my-special-div {
+  font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  /* Additional styling for this specific div */
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing:1px;
+  
+}
+/* .Vfont {
+  font-family: 'Big Shoulders Display', sans-serif;
+  letter-spacing: 2px;
+}
+
+.Rfont{
+  font-family: Arial, Helvetica, sans-serif ;
+  letter-spacing: 2px;
+} */
+
+
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.maintext {
+  top: 2in;
+  left: 1.5in;;
+  z-index: +1;
+  
+}
+
+.button-container {
+  opacity: 100;
+  transform: translateY(50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+  bottom: 20px; /* Adjust the value to position the button */
+  left: 95px;
+ 
+  
+   /* Ensure the button spans the full width */
+  text-align: center;
+}
+
+.button-container.visible,
+.button-container:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+.backgroundContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+
+
+
+
+/* globals.css */
+.flipCard {
+  width: 330px;
+  height: 620px;
+  perspective: 1000px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 2ch;
+}
+
+
+
+.flipCardInner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* background: 
+    radial-gradient(circle at bottom, #B8AEDA, transparent 80%),
+    linear-gradient(to top, black 45%, transparent 100%),
+    linear-gradient(to bottom, transparent, rgba(0.1, 0.2, 0.3, 0.4) 70%),
+    #B8AEDA;
+  animation: bg 20s infinite; */
+}
+
+@keyframes bg {
+  0%, 50% { background-color: cyan; }
+  85% { background-color: #B8AEDA; }
+  100% { background-color: white; }
+}
+
+
+
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+  
+  transition-delay: 0.15;
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  
+  
+ 
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+}
+
+.cardLink {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.zaxis{
+   position: sticky;
+  z-index: +1; 
+}
+.lgFont
+{
+  font-size: 150px;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #A1FFF7 20%,
+    #B8AEDA 60%,
+    #080808 67%,
+    #f5f5f1 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: flex;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Define the initial state 
+FOR NAVBAR BORDER ANIMATION*/
+nav {
+  border-bottom: 2px solid transparent;
+  
+  transition: border-color 0.4s ease;
+}
+
+/* Define the hover state */
+nav:hover {
+  border-color: #CCCCCC; /* Change this to your desired border color */
+}
+
+/* Optionally, add a keyframe animation for more visual effect */
+@keyframes borderPulse {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: cyan; /* Change this to your desired border color */
+  }
+}
+
+/* Apply the animation on hover */
+nav:hover {
+  animation: borderPulse 2s infinite;
+}
+
+
+
+/* Styles for the front side of the card */
+.flipCardFrontF {
+  
+  
+  
+  color: black; /* Use heather color */
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px;
+  overflow: hidden;
+  
+}
+
+
+.video-w-and-h{
+  max-width: 300px;
+  max-height: 600px;
+}
+
+
+.blur-background {
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  transition: backdrop-filter 0.5s ease; /* Add a smooth transition effect */
+}
+
+
+
+/* Add this to your CSS */
+@keyframes swipe-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swipe-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.video-swipe-left {
+  animation: swipe-left 0.5s ease both;
+}
+
+.video-swipe-right {
+  animation: swipe-right 0.5s ease both;
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the overlay */
+  
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it's above other elements */
+  backdrop-filter: blur(5px); /* Add a blur effect to the background */
+}
+

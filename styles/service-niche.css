@@ -1,0 +1,47 @@
+/* Container for the service niches */
+.service-niche {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: black; /* Cyan background */
+    
+    
+  }
+  
+  /* Individual service niche item */
+  .service-niche-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 300px;
+    height: 400px;
+  }
+  
+  /* Icon style */
+  .service-icon {
+    font-size: 2rem;
+    color: #a1fff7; /* Cyan color */
+    
+  }
+  
+  /* Title style */
+  .service-title {
+    font-size: 1.5rem;
+    color: #000; /* Black color */
+    margin-bottom: 10px;
+  }
+  
+  /* Description style */
+  .service-description {
+    font-size: 1rem;
+    color: #555; /* Dark gray color */
+  }
+  
+
+  .writing {
+    max-width: 100%; /* Set a maximum width for the <p> tag */
+
+   
+  }
