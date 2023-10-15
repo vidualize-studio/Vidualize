@@ -76,18 +76,18 @@ export default  function Home() {
 
   const videoURLS=[
     "https://cdn.sanity.io/files/r9425prr/production/bfcb14f4ec98b9089249195ad85ae69923ba0365.mp4",
-    "https://cdn.sanity.io/files/r9425prr/production/40df4e19fca511c9193e04f3edc40c7f3509ab4d.mp4",
-    "https://cdn.sanity.io/files/r9425prr/production/f89bb9a11318286f88354b407cf699dec53c3b09.mp4 ",
-    "https://cdn.sanity.io/files/r9425prr/production/724f40b578fd296cf6c4b24aae9cbc4d483a2244.mp4",
+    "https://cdn.sanity.io/files/r9425prr/production/e1446712ccd7245757f36da0b31d7ebf3ea1ce54.mp4",
+    "https://cdn.sanity.io/files/r9425prr/production/4a994afb00f78b6aaab44d49ed0d4cc67ab6aef5.mp4 ",
+    "https://cdn.sanity.io/files/r9425prr/production/1cff7a779fc3081fcf251a2edb4f39961996c7e9.mp4",
  
    
   ]
   
   const videoURLT=[
-    "https://cdn.sanity.io/files/r9425prr/production/9ad924138d6746462bfb542a90e977229a6cd814.mp4",
-    "https://cdn.sanity.io/files/r9425prr/production/93c9a063b9429370f1325aa5e30ddcab3b225e17.mp4",
-    "https://cdn.sanity.io/files/r9425prr/production/03bc41fef8f3c75ea4884725de35f236c85e9d1f.mp4",
-    "https://cdn.sanity.io/files/r9425prr/production/f59666d09360e340ae8813963461c44a6b015ef7.mp4",
+    "https://cdn.sanity.io/files/r9425prr/production/0efdf75d6478f49b2ab0c97d88e0df8d18613e66.mp4",
+    "https://cdn.sanity.io/files/r9425prr/production/0c8bcee4326cfd06c5c44ca7528b59759bd37998.mp4",
+    "https://cdn.sanity.io/files/r9425prr/production/30623a9a74f016754e3fda33fd1316556891ffef.mp4",
+    "https://cdn.sanity.io/files/r9425prr/production/317c9b29a6e0ab3b9d0fe275df7e531c325cfd39.mp4",
   ]
 
   const videoURLL=[
@@ -111,13 +111,13 @@ export default  function Home() {
       <div className=' lg:flex flex-wrap justify-center bg-black  hidden bg-gradient-to-b from-black to-white '>
       <FlipCard  frontContent="Shorts/Reels" // Replace "/path/to/front-image.jpg" with the actual path to your image
         backContent="video/video1.mp4" // Replace this with the relevant information
-        thumbnail="/thumb1.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
+        thumbnail="/thumb-1.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
         scroll={scroll1}
         setScroll={setScroll1}
         />
       <FlipCard  frontContent="Podcast/Trailers" // Replace "/path/to/front-image.jpg" with the actual path to your image
         backContent="video/video2.mp4" // Replace this with the relevant information
-        thumbnail="/thumb2.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
+        thumbnail="/thumb-2.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
         scroll={scroll2}
         setScroll={setScroll2}
         />
