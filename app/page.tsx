@@ -123,7 +123,7 @@ export default  function Home() {
         />
       <FlipCard  frontContent="Long Form" // Replace "/path/to/front-image.jpg" with the actual path to your image
         backContent="video/video3.mp4" // Replace this with the relevant information
-        thumbnail="/thumb3.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
+        thumbnail="/thumb-3.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
         scroll={scroll3}
         setScroll={setScroll3}
         />
@@ -155,23 +155,7 @@ export default  function Home() {
         
       </div>
 
-        {/* <div className='justify-center md:flex hidden mt-10'>
-        <h1 className='text-black text-3xl '>Shorts and Reels Collection</h1>
-        </div>
-        <VideoCarousel videoSrc={videoURL} />
-
-        <div className='justify-center md:flex hidden mt-24'>
-        <h1 className='text-black text-3xl'>Podcast and Trailers Collection</h1>
-        </div>
-        <VideoCarousel videoSrc={videoURL} />
-
-        <div className='justify-center md:flex hidden mt-24'>
-        <h1 className='text-black text-3xl'>Long Form Collection</h1>
-        </div>
-        <VideoCarousel videoSrc={videoURL} /> */}
         
-        
-
 
 
 

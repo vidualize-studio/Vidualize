@@ -7,14 +7,7 @@ import '../styles/cardtext.scss';
 
 
 const FlipCard = ({ frontContent, backContent, thumbnail, scroll, setScroll }) => {
-  const videoURL = [
-    '/video/video1.mp4',
-    '/video/video1.mp4',
-    '/video/video1.mp4',
-    '/video/video1.mp4',
-    '/video/video1.mp4',
-    // Add more video URLs as needed
-  ];
+  
 
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -28,14 +21,14 @@ const FlipCard = ({ frontContent, backContent, thumbnail, scroll, setScroll }) =
   };
 
   return (
-    <div className='flipCard flex flex-col mx-4 my-4 rounded-xl mt-10 '>
+    <div className='flipCard flex flex-col mx-4 my-4 rounded-xl mt-10 shadow-md '>
       <div className={`flipCardInner rounded-xl  items-center bg-black sm:bg-transparent`}>
         <div className={`flipCardFront flipCardFrontF rounded-xl flex-col-reverse `}>
-          <div className='flex rounded-xl mb-10'>
+          <div className='flex rounded-xl mb-10 border-2 border-cyan'>
             <img src={thumbnail} className='rounded-xl sm:mb-0 mb-20 xs:mb-12' />
           </div>
           <div className='font-medium my-special-div'>
-            <h2 className='sm:text-2xl text-xl text-white'>{frontContent}</h2>
+            <h2 className='sm:text-2xl text-xl text-white  animate-charcter'>{frontContent}</h2>
           </div>
         </div>
         <div className={`flipCardBack flex-col rounded-xl `}>
