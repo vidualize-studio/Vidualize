@@ -24,7 +24,7 @@ export default  function Home() {
   useEffect(() => {
     if (scroll1) {
       // Scroll to a specific position (e.g., y-coordinate 500)
-      window.scrollTo({ top: 3220, behavior: 'smooth' });
+      window.scrollTo({ top: 3420, behavior: 'smooth' });
       setScroll1(false)
     }
   }, [scroll1]);
@@ -32,7 +32,7 @@ export default  function Home() {
   useEffect(() => {
     if (scroll2) {
       // Scroll to a specific position (e.g., y-coordinate 500)
-      window.scrollTo({ top: 3880, behavior: 'smooth' });
+      window.scrollTo({ top: 4080, behavior: 'smooth' });
       setScroll2(false)
     }
   }, [scroll2]);

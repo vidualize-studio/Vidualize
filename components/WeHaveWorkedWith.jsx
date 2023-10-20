@@ -7,7 +7,7 @@ const clients = [
   { name: 'openai', logoSrc: '/workedwithlogos/openai.jpeg', link: 'https://example.com/openai' },
   { name: 'saqibqureshi', logoSrc: '/workedwithlogos/saqibqureshi.png', link: 'https://www.linkedin.com/in/saqib-qureshi/' },
   { name: 'numad', logoSrc: '/workedwithlogos/numad.jpeg', link: 'https://example.com/numad' },
-  { name: 'whenshifthappens', logoSrc: '/workedwithlogos/whenshifthappens.png', link: 'https://podcasts.apple.com/us/podcast/when-shift-happens-podcast/id1596083462' },
+  { name: 'whenshifthappens', logoSrc: '/workedwithlogos/whentheshifthappens.png', link: 'https://podcasts.apple.com/us/podcast/when-shift-happens-podcast/id1596083462' },
   // Add more clients here
 ];
 
@@ -78,7 +78,7 @@ const WeHaveWorkedWith = () => {
               <img
                 src={clients[6].logoSrc}
                 alt={clients[6].name}
-                className="h-12 sm:h-16 md:h-18 "
+                className="h-14 sm:h-20 md:h-24 "
               />
             </a>
           </div>
