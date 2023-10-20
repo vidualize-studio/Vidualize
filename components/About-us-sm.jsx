@@ -41,6 +41,11 @@ const AboutUssm = () => {
 
         </div>
         {/* Team Member 3 */}
+        <div className='my-special-div mt-28'>
+          <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight mb-6 md:mb-12 text-black">
+            Board Members
+          </h1>
+        </div>
         <div className='flex justify-center mt-4'>
           <div className="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300 ease-in-out mt-4 max-w-2xl items-center mx-2">
             <div className="rounded-full overflow-hidden mx-auto w-24 h-24 md:w-40 md:h-40 border-4 border-cyan hover:border-teal">
