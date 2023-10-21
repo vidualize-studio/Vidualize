@@ -2,11 +2,11 @@ import React from 'react';
 
 const clients = [
   { name: 'Careem', logoSrc: '/workedwithlogos/careem.svg', link: 'https://www.careem.com/' },
-  { name: 'Islam', logoSrc: '/workedwithlogos/islam.jpeg', link: 'https://www.theguiderapp.com/' },
+  { name: 'Islam', logoSrc: '/workedwithlogos/islam.webp', link: 'https://www.theguiderapp.com/' },
   { name: 'launchgood', logoSrc: '/workedwithlogos/launchgood.jpg', link: 'https://www.launchgood.com/' },
-  { name: 'openai', logoSrc: '/workedwithlogos/openai.jpeg', link: 'https://example.com/openai' },
+  { name: 'openai', logoSrc: '/workedwithlogos/openai.webp', link: 'https://example.com/openai' },
   { name: 'saqibqureshi', logoSrc: '/workedwithlogos/saqibqureshi.png', link: 'https://www.linkedin.com/in/saqib-qureshi/' },
-  { name: 'numad', logoSrc: '/workedwithlogos/numad.jpeg', link: 'https://example.com/numad' },
+  { name: 'numad', logoSrc: '/workedwithlogos/numad.webp', link: 'https://example.com/numad' },
   { name: 'whenshifthappens', logoSrc: '/workedwithlogos/whentheshifthappens.png', link: 'https://podcasts.apple.com/us/podcast/when-shift-happens-podcast/id1596083462' },
   // Add more clients here
 ];

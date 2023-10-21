@@ -50,7 +50,7 @@ const VideoCarousel = ({ videoSrc }) => {
   };
 
   return (
-    <div className=' lg:flex hidden my-2'>
+    <div className=' flex my-2'>
 
       <motion.div className='carousel mx-24'>
 

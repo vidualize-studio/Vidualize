@@ -147,7 +147,8 @@ export default function Home() {
 
       <MainText />
 
-      <VideoPlayer videoSrc='https://dsk5kx2dq6s6z.cloudfront.net/Vidualize.mp4' />
+      {!isMobileView ? <VideoPlayer videoSrc='https://dsk5kx2dq6s6z.cloudfront.net/Vidualize.mp4' />: null}  
+      
       {isMobileView ? <BVideoCarousel videoURLs={videoURLS} tittle='Shorts/Reels' idforswipe='1' /> : null} 
       {isMobileView ? <BVideoCarousel videoURLs={videoURLT} tittle='Podcast/Trailer' idforswipe='2' /> : null}  
       {/* <BVideoCarousel videoURLs={videoURLT} tittle='Podcast/Trailer' idforswipe='2' /> */}
@@ -155,19 +156,19 @@ export default function Home() {
       <div className=' lg:flex flex-wrap justify-center bg-black  hidden bg-gradient-to-b from-black to-white '>
         <FlipCard frontContent="Shorts/Reels" // Replace "/path/to/front-image.jpg" with the actual path to your image
           backContent="https://dsk5kx2dq6s6z.cloudfront.net/video1.mp4" // Replace this with the relevant information
-          thumbnail="/thumb-1.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
+          thumbnail="/thumb-1.webp" // Replace "/somewhere" with the actual link you want to navigate to/ 
           scroll={scroll1}
           setScroll={setScroll1}
         />
         <FlipCard frontContent="Podcast/Trailers" // Replace "/path/to/front-image.jpg" with the actual path to your image
           backContent="https://dsk5kx2dq6s6z.cloudfront.net/video2.mp4" // Replace this with the relevant information
-          thumbnail="/thumb-2.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
+          thumbnail="/thumb-2.webp" // Replace "/somewhere" with the actual link you want to navigate to/ 
           scroll={scroll2}
           setScroll={setScroll2}
         />
         <FlipCard frontContent="Long Form" // Replace "/path/to/front-image.jpg" with the actual path to your image
           backContent="https://dsk5kx2dq6s6z.cloudfront.net/video3.mp4" // Replace this with the relevant information
-          thumbnail="/thumb-3.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
+          thumbnail="/thumb-3.webp" // Replace "/somewhere" with the actual link you want to navigate to/ 
           scroll={scroll3}
           setScroll={setScroll3}
         />
