@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const clients = [
   { name: 'Careem', logoSrc: '/workedwithlogos/careem.svg', link: 'https://www.careem.com/' },
@@ -21,63 +22,77 @@ const WeHaveWorkedWith = () => {
         <div className="grid grid-cols-2 md:grid-cols-7 gap-6">
           <div className="flex justify-center items-center">
             <a href={clients[0].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[0].logoSrc}
                 alt={clients[0].name}
+                width={130}  
+                height={130}
                 className="h-12 sm:h-20 md:h-24 rounded-full"
               />
             </a>
           </div>
           <div className="flex justify-center items-center">
             <a href={clients[1].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[1].logoSrc}
                 alt={clients[1].name}
+                width={87}  
+                height={87}
                 className="h-10 sm:h-16 md:h-20 rounded-full"
               />
             </a>
           </div>
           <div className="flex justify-center items-center">
             <a href={clients[2].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[2].logoSrc}
                 alt={clients[2].name}
+                width={130}  
+                height={130}
                 className="h-14 sm:h-20 md:h-28 rounded-full"
               />
             </a>
           </div>
           <div className="flex justify-center items-center">
             <a href={clients[3].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[3].logoSrc}
                 alt={clients[3].name}
+                width={87}  
+                height={87}
                 className="h-10 sm:h-16 md:h-20 rounded-full"
               />
             </a>
           </div>
           <div className="flex justify-center items-center">
             <a href={clients[4].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[4].logoSrc}
                 alt={clients[4].name}
+                width={150}  
+                height={150}
                 className="h-14 sm:h-20 md:h-28 rounded-full"
               />
             </a>
           </div>
           <div className="flex justify-center items-center">
             <a href={clients[5].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[5].logoSrc}
                 alt={clients[5].name}
+                width={140}  
+                height={140}
                 className="h-16 sm:h-24 md:h-28 rounded-full"
               />
             </a>
           </div>
           <div className=" justify-center items-center hidden md:flex">
             <a href={clients[6].link} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={clients[6].logoSrc}
                 alt={clients[6].name}
+                width={130}  
+                height={130}
                 className="h-14 sm:h-20 md:h-24 "
               />
             </a>
