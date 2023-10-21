@@ -93,7 +93,7 @@ export default function Home() {
 
 
   const videoURLS = [
-    "https://dsk5kx2dq6s6z.cloudfront.net/S2.mp4",
+    "https://dsk5kx2dq6s6z.cloudfront.net/S1.mp4",
     "https://dsk5kx2dq6s6z.cloudfront.net/S2.mp4",
     "https://dsk5kx2dq6s6z.cloudfront.net/S3.mp4 ",
     "https://dsk5kx2dq6s6z.cloudfront.net/S4.mp4",
@@ -124,26 +124,26 @@ export default function Home() {
 
       <MainText />
 
-      <VideoPlayer videoSrc='https://cdn.sanity.io/files/r9425prr/production/0a79498bd1d2c66ce294be710cedd02913014bd2.mp4' />
+      <VideoPlayer videoSrc='https://dsk5kx2dq6s6z.cloudfront.net/Vidualize.mp4' />
 
       <BVideoCarousel videoURLs={videoURLS} tittle='Shorts/Reels' idforswipe='1' />
       <BVideoCarousel videoURLs={videoURLT} tittle='Podcast/Trailer' idforswipe='2' />
       {/* <LongformBCarousel videoURLs={videoURLL} tittle='Long Form Collection'/> */}
       <div className=' lg:flex flex-wrap justify-center bg-black  hidden bg-gradient-to-b from-black to-white '>
         <FlipCard frontContent="Shorts/Reels" // Replace "/path/to/front-image.jpg" with the actual path to your image
-          backContent="video/video1.mp4" // Replace this with the relevant information
+          backContent="https://dsk5kx2dq6s6z.cloudfront.net/video1.mp4" // Replace this with the relevant information
           thumbnail="/thumb-1.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
           scroll={scroll1}
           setScroll={setScroll1}
         />
         <FlipCard frontContent="Podcast/Trailers" // Replace "/path/to/front-image.jpg" with the actual path to your image
-          backContent="video/video2.mp4" // Replace this with the relevant information
+          backContent="https://dsk5kx2dq6s6z.cloudfront.net/video2.mp4" // Replace this with the relevant information
           thumbnail="/thumb-2.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
           scroll={scroll2}
           setScroll={setScroll2}
         />
         <FlipCard frontContent="Long Form" // Replace "/path/to/front-image.jpg" with the actual path to your image
-          backContent="video/video3.mp4" // Replace this with the relevant information
+          backContent="https://dsk5kx2dq6s6z.cloudfront.net/video3.mp4" // Replace this with the relevant information
           thumbnail="/thumb-3.png" // Replace "/somewhere" with the actual link you want to navigate to/ 
           scroll={scroll3}
           setScroll={setScroll3}
