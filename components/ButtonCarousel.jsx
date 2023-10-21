@@ -1,11 +1,12 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
 
-const BVideoCarousel = ({ videoURLs, tittle,idforswipe }) => {
+const BVideoCarousel = ({ videoURLs, tittle, idforswipe }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const videoRefs = useRef([]);
   const [isPlaying, setIsPlaying] = useState(new Array(videoURLs.length).fill(false));
   const [showControls, setShowControls] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
@@ -85,7 +86,7 @@ const BVideoCarousel = ({ videoURLs, tittle,idforswipe }) => {
   };
 
   return (
-    <div id={idforswipe} className="lg:hidden bg-black pt-10" data-carousel="static">
+    <div id={idforswipe} className=" bg-black pt-10" data-carousel="static">
       <div className='  font-medium my-special-div flex justify-center '>
         <h2 className='md:text-4xl text-2xl  text-white'>{tittle} </h2>
       </div>
@@ -98,15 +99,26 @@ const BVideoCarousel = ({ videoURLs, tittle,idforswipe }) => {
                 }`}
               data-carousel-item={index === currentImageIndex ? 'active' : ''}
             >
-              <video
-                className={`rounded-lg sm:h-screen ${index === currentImageIndex ? ' ' : 'hidden'
-                  }`}
-                ref={(el) => (videoRefs.current[index] = el)}
-                onClick={() => togglePlayPause(index)}
-              >
-                <source src={url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {/* Video and Spinner Container */}
+              <div className="relative rounded-lg">
+                <video
+                  className={`rounded-lg sm:h-screen ${index === currentImageIndex ? ' ' : 'hidden'
+                    }`}
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  onClick={() => togglePlayPause(index)}
+                  onCanPlay={() => setIsLoading(false)}  // Hide spinner once video can play
+                >
+                  <source src={url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                {/* Spinner positioned within Video Container */}
+                {isLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="spinner"></div>
+                  </div>
+                )}
+              </div>
               {/* Play/Pause Button */}
               {showControls && (
                 <div

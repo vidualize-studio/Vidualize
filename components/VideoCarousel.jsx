@@ -5,9 +5,12 @@ import { motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
+
 const VideoCarousel = ({ videoSrc }) => {
   const [selectedVideoIndex, setSelectedVideoIndex] = useState(null);
   const [isDragging, setIsDragging] = useState(false); // Track whether the carousel is being dragged
+  const [isLoading, setIsLoading] = useState(true);
+
 
   const videoRef = useRef(null);
 
@@ -33,52 +36,10 @@ const VideoCarousel = ({ videoSrc }) => {
     }
   });
 
-  const SwipeHandIcon = () => (
-    <svg
-      width="64"
-      height="64"
-      viewBox="0 0 64 64"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="32" cy="32" r="31" stroke="black" strokeWidth="2" />
-      <path
-        d="M20 32H44"
-        stroke="black"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M40 40L48 32L40 24"
-        stroke="black"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M24 24L16 32L24 40"
-        stroke="black"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M32 48C35 48 36.5 46 36.5 43.5C36.5 41 35 40 33.5 40C32 40 30.5 41 30.5 43.5C30.5 46 32 48 32 48Z"
-        fill="black"
-      />
-      <path
-        d="M32 36V28"
-        stroke="black"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-  
-  
-  
+
+
+
+
 
   // Handle the video click to center it and play
   const handleVideoClick = (index) => {
@@ -90,7 +51,7 @@ const VideoCarousel = ({ videoSrc }) => {
 
   return (
     <div className=' lg:flex hidden my-2'>
-      
+
       <motion.div className='carousel mx-24'>
 
         <motion.div
@@ -102,14 +63,20 @@ const VideoCarousel = ({ videoSrc }) => {
         >
           {videoSrc.map((src, index) => (
             <motion.div
-              className='item'
+              className='item relative'
               key={index}
               onClick={() => handleVideoClick(index)}
             >
+              {isLoading && (
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                  <div className="spinner"></div>
+                </div>
+              )}
 
-              <video className='border-2 border-heather hover:border-black' id={`videoPlayer${index}`} ref={videoRef} autoPlay muted loop>
+              <video className='border-2 border-heather hover:border-black' id={`videoPlayer${index}`} ref={videoRef} autoPlay muted loop onCanPlay={() => setIsLoading(false)}>
                 <source src={src} type='video/mp4' autoPlay muted />
                 Your browser does not support the video tag.
+
               </video>
             </motion.div>
           ))}
@@ -118,7 +85,7 @@ const VideoCarousel = ({ videoSrc }) => {
 
       {/* Right Arrow for the Carousel */}
       <div className="relative top-60 right-10 transform ">
-        <Image width={110} height={110} src='/swipe-right.svg'/>
+        <Image width={110} height={110} src='/swipe-right.svg' />
       </div>
 
       {/* Render video modal if a video is clicked */}

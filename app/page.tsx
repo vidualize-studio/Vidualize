@@ -19,6 +19,29 @@ export default function Home() {
   const [scroll1, setScroll1] = useState(false);
   const [scroll2, setScroll2] = useState(false);
   const [scroll3, setScroll3] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const updateViewport = () => {
+      if (window.innerWidth <= 850) {  // Set your breakpoint value
+        setIsMobileView(true);
+      } else {
+        setIsMobileView(false);
+      }
+    };
+  
+    // Initial check
+    updateViewport();
+  
+    // Add resize event listener
+    window.addEventListener('resize', updateViewport);
+  
+    // Cleanup: Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('resize', updateViewport);
+    };
+  }, []);
+  
 
 
   useEffect(() => {
@@ -125,9 +148,9 @@ export default function Home() {
       <MainText />
 
       <VideoPlayer videoSrc='https://dsk5kx2dq6s6z.cloudfront.net/Vidualize.mp4' />
-
-      <BVideoCarousel videoURLs={videoURLS} tittle='Shorts/Reels' idforswipe='1' />
-      <BVideoCarousel videoURLs={videoURLT} tittle='Podcast/Trailer' idforswipe='2' />
+      {isMobileView ? <BVideoCarousel videoURLs={videoURLS} tittle='Shorts/Reels' idforswipe='1' /> : null} 
+      {isMobileView ? <BVideoCarousel videoURLs={videoURLT} tittle='Podcast/Trailer' idforswipe='2' /> : null}  
+      {/* <BVideoCarousel videoURLs={videoURLT} tittle='Podcast/Trailer' idforswipe='2' /> */}
       {/* <LongformBCarousel videoURLs={videoURLL} tittle='Long Form Collection'/> */}
       <div className=' lg:flex flex-wrap justify-center bg-black  hidden bg-gradient-to-b from-black to-white '>
         <FlipCard frontContent="Shorts/Reels" // Replace "/path/to/front-image.jpg" with the actual path to your image
@@ -153,9 +176,10 @@ export default function Home() {
       <AboutUssm />
 
       <ServiceNiche />
-
-      <VideoCollection videoURL={videoURLS} title='Shorts and Reels Collection' />
-      <VideoCollection videoURL={videoURLT} title='Trailers and Podcast Collection' />
+      {!isMobileView ? <VideoCollection videoURL={videoURLS} title='Shorts and Reels Collection' /> : null}  
+      {!isMobileView ? <VideoCollection videoURL={videoURLT} title='Trailers and Podcast Collection' /> : null}  
+      {/* <VideoCollection videoURL={videoURLS} title='Shorts and Reels Collection' />
+      <VideoCollection videoURL={videoURLT} title='Trailers and Podcast Collection' /> */}
 
 
 
