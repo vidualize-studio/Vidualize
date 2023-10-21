@@ -2,12 +2,12 @@ import React from 'react';
 
 const clients = [
   { name: 'Careem', logoSrc: '/workedwithlogos/careem.svg', link: 'https://www.careem.com/' },
-  { name: 'Islam', logoSrc: '/workedwithlogos/islam.webp', link: 'https://www.theguiderapp.com/' },
-  { name: 'launchgood', logoSrc: '/workedwithlogos/launchgood.jpg', link: 'https://www.launchgood.com/' },
-  { name: 'openai', logoSrc: '/workedwithlogos/openai.webp', link: 'https://example.com/openai' },
-  { name: 'saqibqureshi', logoSrc: '/workedwithlogos/saqibqureshi.png', link: 'https://www.linkedin.com/in/saqib-qureshi/' },
-  { name: 'numad', logoSrc: '/workedwithlogos/numad.webp', link: 'https://example.com/numad' },
-  { name: 'whenshifthappens', logoSrc: '/workedwithlogos/whentheshifthappens.png', link: 'https://podcasts.apple.com/us/podcast/when-shift-happens-podcast/id1596083462' },
+  { name: 'Islam', logoSrc: '/workedwithlogos/islam_1.webp', link: 'https://www.theguiderapp.com/' },
+  { name: 'launchgood', logoSrc: '/workedwithlogos/launchgood.webp', link: 'https://www.launchgood.com/' },
+  { name: 'openai', logoSrc: '/workedwithlogos/openai_1.webp', link: 'https://example.com/openai' },
+  { name: 'saqibqureshi', logoSrc: '/workedwithlogos/saqibqureshi.webp', link: 'https://www.linkedin.com/in/saqib-qureshi/' },
+  { name: 'numad', logoSrc: '/workedwithlogos/numad_1.webp', link: 'https://example.com/numad' },
+  { name: 'whenshifthappens', logoSrc: '/workedwithlogos/whentheshifthappens.webp', link: 'https://podcasts.apple.com/us/podcast/when-shift-happens-podcast/id1596083462' },
   // Add more clients here
 ];
 
